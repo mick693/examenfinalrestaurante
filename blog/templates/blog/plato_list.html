@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+{%block content%}
+  <div class="post">
+
+<table>
+
+<th> Orden de transacciones </th>
+
+{% for plato in plato%}
+
+
+  <td><h2><a href="{% url 'detallecaja' pk=cuenta.pk%}">{{plato.nombre}} </a></h2></td>
+  <td> ........................... </td>
+  <td><h3>{{plato.descripcion|truncatechars:200}}</h3></td>
+</tr>
+
+  {% endfor%}
+</table>
+
+  </div>
+{%endblock content%}
